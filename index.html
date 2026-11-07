@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#09070f">
-  <meta name="description" content="The personal corner of Exire — Roblox development, reanimation projects, VFX and more.">
-  <title>EXIRE — personal site</title>
+  <meta name="theme-color" content="#111016">
+  <meta name="description" content="Exire's little corner of the internet — Roblox projects, reanimation, VFX, experiments and links.">
+  <title>exire — little corner of the internet</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,116 +15,190 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <aside class="sidebar-shell" id="sidebarShell" aria-label="Site navigation">
-    <button class="sidebar-rail" id="sidebarRail" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebarPanel">
-      <span class="rail-mark">E<span>R</span></span><span class="rail-word">MENU</span>
-      <span class="rail-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-    </button>
-    <div class="sidebar-panel" id="sidebarPanel" aria-hidden="true">
-      <div class="side-top">
-        <a class="side-brand" href="#home" aria-label="Exire home">
-          <span class="brand-mark">E<span>R</span></span>
-          <span><strong>EXIRE</strong><small>PERSONAL SPACE</small></span>
-        </a>
-        <button class="icon-button side-close" id="sidebarClose" type="button" aria-label="Close navigation">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
-        </button>
+  <div class="paper-grain" aria-hidden="true"></div>
+  <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Open site menu" aria-expanded="false">
+    <span></span><span></span><span class="menu-word">MENU</span>
+  </button>
+
+  <div class="site-layout">
+    <aside class="profile-rail" id="profileRail">
+      <div class="rail-header">
+        <a class="site-mark" href="#home" aria-label="Exire home"><span>e</span><span>r</span></a>
+        <span class="rail-kicker">A PERSONAL WEBSITE</span>
       </div>
-      <div class="side-label">NAVIGATION</div>
-      <nav class="side-nav">
-        <a href="#home" class="nav-link active"><span class="nav-icon">⌂</span><span>Home</span><span class="nav-arrow">↗</span></a>
-        <a href="#about" class="nav-link"><span class="nav-icon">◈</span><span>About me</span><span class="nav-arrow">↗</span></a>
-        <a href="#projects" class="nav-link"><span class="nav-icon">▦</span><span>Projects</span><span class="nav-arrow">↗</span></a>
-        <a href="#discord" class="nav-link"><span class="nav-icon">◉</span><span>Discord</span><span class="nav-arrow">↗</span></a>
-        <a href="#links" class="nav-link"><span class="nav-icon">↗</span><span>Find me</span><span class="nav-arrow">↗</span></a>
+
+      <div class="profile-card">
+        <div class="avatar-wrap">
+          <div class="avatar-mark" aria-label="ER monogram"><span>e</span><span>r</span></div>
+          <span class="avatar-spark" aria-hidden="true">✳</span>
+          <span class="avatar-status" aria-label="Online"></span>
+        </div>
+        <h2>exire<span class="name-star">✳</span></h2>
+        <p class="profile-handle">@cillfall</p>
+        <p class="profile-bio">making Roblox stuff, getting lost in details, and starting projects at questionable hours.</p>
+        <div class="profile-status"><i></i> AROUND / BUILDING THINGS</div>
+      </div>
+
+      <div class="rail-divider"><span>THE SITE</span><i></i></div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="nav-link is-active" href="#home"><span class="nav-glyph">⌂</span> home <span class="nav-number">01</span></a>
+        <a class="nav-link" href="#about"><span class="nav-glyph">✳</span> about <span class="nav-number">02</span></a>
+        <a class="nav-link" href="#projects"><span class="nav-glyph">▧</span> projects <span class="nav-number">03</span></a>
+        <a class="nav-link" href="#discord"><span class="nav-glyph">◉</span> discord <span class="nav-number">04</span></a>
+        <a class="nav-link" href="#links"><span class="nav-glyph">↗</span> link stash <span class="nav-number">05</span></a>
       </nav>
-      <div class="side-bottom">
-        <div class="side-status"><span class="status-dot"></span><span>BUILDING SOMETHING</span></div>
-        <p>Made with intent.<br>Powered by curiosity.</p>
-        <span class="side-version">ER / 001</span>
-      </div>
-    </div>
-  </aside>
-  <div class="mobile-scrim" id="mobileScrim"></div>
-  <header class="topbar">
-    <a class="top-wordmark" href="#home"><span class="mini-mark">ER</span><span>EXIRE<span class="top-slash"> / </span><span class="top-muted">PERSONAL SITE</span></span></a>
-    <div class="top-right">
-      <span class="top-status"><i></i> ROBLOX DEVELOPER</span>
-      <button class="menu-button" id="menuButton" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
-    </div>
-  </header>
-  <main id="main">
-    <section class="hero section-wrap" id="home" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="eyebrow-line"></span> A LITTLE CORNER OF THE INTERNET <span class="eyebrow-index">NO. 001</span></div>
-        <h1 id="hero-title">JUST<br><span class="hero-name">EXIRE<span class="hero-period">.</span></span></h1>
-        <p class="hero-description">Roblox developer, reanimation enthusiast, and someone who probably has one too many projects open.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#projects">Explore my work <span>↗</span></a>
-          <a class="button button-quiet" href="#discord">Find me on Discord <span>↓</span></a>
+
+      <div class="rail-bottom">
+        <div class="rail-note">
+          <span class="note-pin">✦</span>
+          <p>you're on the internet.<br>make yourself at home.</p>
         </div>
-        <div class="hero-meta"><span><b>01</b> / DEVELOPER</span><span><b>02</b> / CREATOR</span><span><b>03</b> / ALWAYS LEARNING</span></div>
+        <div class="rail-footline"><span>ER / 001</span><span>HAND-BUILT</span></div>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="art-grid"></div><div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div>
-        <div class="art-core"><span class="core-top">EXIRE REANIMATE</span><strong>E<span>R</span></strong><span class="core-bottom">BUILT DIFFERENTLY.</span></div>
-        <span class="art-cross cross-one">+</span><span class="art-cross cross-two">+</span>
-        <span class="art-coordinate">25° / ER</span><span class="art-side-note">CREATIVE SYSTEMS<br>IN PROGRESS</span>
-      </div>
-      <a href="#about" class="scroll-cue"><span class="scroll-line"></span> SCROLL TO EXPLORE</a>
-    </section>
-    <section class="intro-band">
-      <div class="section-wrap intro-inner"><span class="section-kicker">A QUICK INTRO</span><p>I make things, break things, figure out why, and usually come back with something better.</p><span class="intro-star">✳</span></div>
-    </section>
-    <section class="content-section section-wrap" id="about" aria-labelledby="about-title">
-      <div class="section-heading"><div><span class="section-kicker">01 / THE PERSON</span><h2 id="about-title">A BIT ABOUT <em>ME.</em></h2></div><span class="heading-aside">NOT A CORPORATE BIO.<br>JUST THE BASICS.</span></div>
-      <div class="about-grid">
-        <div class="about-main glass-card">
-          <div class="about-avatar"><span>ER</span><i></i></div>
-          <div class="about-text"><span class="micro-label">WHO'S BEHIND THE SCREEN?</span><h3>Hey, I'm Exire.</h3><p>I spend a lot of time building Roblox projects — especially reanimation scripts, combat ideas, custom effects, and tools. I like things that feel polished, work properly, and have their own identity.</p><p>This site is where I can keep my projects and links in one place. Have a look around.</p></div>
-          <span class="card-index">ER—001</span>
+    </aside>
+
+    <div class="mobile-scrim" id="mobileScrim"></div>
+
+    <main class="main-column" id="main">
+      <header class="page-topline">
+        <span><i class="topline-dot"></i> YOU FOUND MY CORNER OF THE INTERNET</span>
+        <a href="https://scriptblox.com/u/exire" target="_blank" rel="noopener">SCRIPTBLOX <b>↗</b></a>
+      </header>
+
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow reveal"><span class="eyebrow-star">✳</span> ROBLOX DEV / INTERNET PERSON</div>
+          <h1 id="hero-title" class="reveal">oh, hey.<br>i'm <em>exire.</em></h1>
+          <p class="hero-intro reveal">I make Roblox projects, reanimation scripts, custom effects, and a bunch of little things that probably started as “this would be cool”.</p>
+          <div class="hero-actions reveal">
+            <a class="button button-main" href="#projects">see what i'm making <span>↘</span></a>
+            <a class="text-link" href="#about">a little about me <span>→</span></a>
+          </div>
+          <div class="hero-foot reveal">
+            <span><b>mostly</b> Luau & Roblox</span>
+            <span class="foot-divider">/</span>
+            <span><b>always</b> tinkering</span>
+          </div>
         </div>
-        <div class="about-side">
-          <div class="mini-card glass-card"><span class="mini-card-icon">⌘</span><span class="micro-label">MAIN INTEREST</span><strong>ROBLOX<br>DEVELOPMENT</strong><span class="mini-caption">Luau · Systems · VFX</span></div>
-          <div class="mini-card glass-card"><span class="mini-card-icon">✳</span><span class="micro-label">CURRENT MINDSET</span><strong>MAKE IT<br>FEEL RIGHT.</strong><span class="mini-caption">Details matter.</span></div>
+
+        <div class="hero-side reveal" aria-label="Current project note">
+          <div class="hero-doodle" aria-hidden="true">
+            <span class="doodle-star star-a">✳</span>
+            <span class="doodle-star star-b">✦</span>
+            <span class="doodle-circle"></span>
+            <span class="doodle-label">EXIRE<br>REANIMATE</span>
+            <span class="doodle-initials">E<span>R</span></span>
+            <span class="doodle-orbit orbit-one"></span>
+            <span class="doodle-orbit orbit-two"></span>
+          </div>
+          <div class="sticky-note">
+            <span class="sticky-tape"></span>
+            <span class="sticky-label">CURRENTLY ON MY DESK</span>
+            <strong>Star Glitcher V2</strong>
+            <p>building it properly.<br>no rush, just details.</p>
+            <span class="sticky-signoff">— exire <span>♡</span></span>
+          </div>
+          <span class="hero-side-caption">A WORK IN PROGRESS, LIKE MOST THINGS.</span>
         </div>
-      </div>
-    </section>
-    <section class="content-section projects-section" id="projects" aria-labelledby="projects-title">
-      <div class="section-wrap">
-        <div class="section-heading"><div><span class="section-kicker">02 / THINGS I'M MAKING</span><h2 id="projects-title">SELECTED <em>PROJECTS.</em></h2></div><span class="heading-aside">A FEW THINGS<br>FROM THE WORKBENCH.</span></div>
-        <div class="project-list">
-          <article class="project-card project-featured">
-            <div class="project-visual visual-star"><div class="visual-noise"></div><div class="star-cross">✳</div><span class="visual-label">ER / PROJECT 01</span><span class="visual-number">01</span><div class="visual-word">STAR<br>GLITCHER<span> V2</span></div><div class="visual-bottom">REALITY IS OPTIONAL.</div></div>
-            <div class="project-info"><div class="project-topline"><span class="project-type">ROBLOX · REANIMATION</span><span class="project-status status-progress"><i></i> IN DEVELOPMENT</span></div><h3>FE Star Glitcher V2</h3><p>A new chapter for the Star Glitcher project. Built around stronger presentation, effects, and a more complete experience.</p><div class="project-footer"><span>NO PUBLIC RELEASE DATE</span><span class="project-arrow">↗</span></div></div>
-          </article>
-          <article class="project-card">
-            <div class="project-visual visual-er"><span class="visual-label">ER / COLLECTION</span><span class="visual-number">02</span><div class="er-monogram">E<span>R</span></div><div class="visual-bottom">EXIRE REANIMATE</div></div>
-            <div class="project-info"><div class="project-topline"><span class="project-type">ROBLOX · SCRIPT COLLECTION</span><span class="project-status"><i></i> ONGOING</span></div><h3>Exire Reanimate</h3><p>A collection of character reanimation projects made under the Exire name. Each release gets its own identity and polish.</p><div class="project-footer"><span>THE MAIN COLLECTION</span><span class="project-arrow">↗</span></div></div>
-          </article>
-          <article class="project-card">
-            <div class="project-visual visual-vfx"><span class="visual-label">ER / EXPERIMENTS</span><span class="visual-number">03</span><div class="vfx-lines"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="vfx-title">VFX<br><span>LAB</span></div><div class="visual-bottom">MAKE EVERY FRAME COUNT.</div></div>
-            <div class="project-info"><div class="project-topline"><span class="project-type">ROBLOX · TOOLS & EFFECTS</span><span class="project-status"><i></i> EXPERIMENTAL</span></div><h3>VFX & Tools</h3><p>Custom effects, attack presentation, animation tooling, and the small technical details that make a project feel finished.</p><div class="project-footer"><span>ALWAYS EXPERIMENTING</span><span class="project-arrow">↗</span></div></div>
-          </article>
+        <a class="hero-scroll" href="#about"><span></span> KEEP SCROLLING, THERE'S MORE</a>
+      </section>
+
+      <div class="ticker" aria-label="Exire Reanimate, Roblox, custom VFX, and experiments">
+        <div class="ticker-track">
+          <span>EXIRE REANIMATE</span><i>✳</i><span>ROBLOX THINGS</span><i>✳</i><span>CUSTOM VFX</span><i>✳</i><span>SMALL EXPERIMENTS</span><i>✳</i>
+          <span>EXIRE REANIMATE</span><i>✳</i><span>ROBLOX THINGS</span><i>✳</i><span>CUSTOM VFX</span><i>✳</i><span>SMALL EXPERIMENTS</span><i>✳</i>
         </div>
       </div>
-    </section>
-    <section class="discord-section section-wrap" id="discord" aria-labelledby="discord-title">
-      <div class="discord-card">
-        <div class="discord-content"><span class="section-kicker">03 / SAY HI</span><h2 id="discord-title">BETTER IN<br><em>THE SERVER.</em></h2><p>Want to talk, follow the projects, or just hang out? Discord is the best place to find me.</p><div class="discord-actions"><button class="button button-primary" id="copyDiscord" type="button">Copy username <span>▣</span></button><a class="button button-quiet" id="discordProfileLink" href="#" hidden>Open profile <span>↗</span></a><a class="button button-quiet" id="discordInviteLink" href="#" target="_blank" rel="noopener" hidden>Join the server <span>↗</span></a></div><span class="copy-feedback" id="copyFeedback" role="status" aria-live="polite"></span></div>
-      </div>
-    </section>
-    <section class="content-section section-wrap links-section" id="links" aria-labelledby="links-title">
-      <div class="section-heading"><div><span class="section-kicker">04 / ELSEWHERE</span><h2 id="links-title">FIND <em>ME.</em></h2></div><span class="heading-aside">OTHER PLACES<br>YOU CAN FIND MY WORK.</span></div>
-      <div class="link-grid" id="linkGrid">
-        <a class="link-card" href="https://scriptblox.com/u/exire" target="_blank" rel="noopener"><span class="link-symbol">S</span><span><strong>ScriptBlox</strong><small>Scripts & releases</small></span><span class="link-out">↗</span></a>
-        <a class="link-card" id="githubLink" href="#" target="_blank" rel="noopener" hidden><span class="link-symbol">⌘</span><span><strong>GitHub</strong><small>Code & projects</small></span><span class="link-out">↗</span></a>
-        <a class="link-card" id="youtubeLink" href="#" target="_blank" rel="noopener" hidden><span class="link-symbol">▷</span><span><strong>YouTube</strong><small>Videos & showcases</small></span><span class="link-out">↗</span></a>
-        <a class="link-card" href="#discord"><span class="link-symbol">◉</span><span><strong>Discord</strong><small>Come say hello</small></span><span class="link-out">↗</span></a>
-      </div>
-    </section>
-    <footer class="footer section-wrap"><a href="#home" class="footer-brand"><span class="mini-mark">ER</span> EXIRE</a><span>DESIGNED & BUILT FOR EXIRE.</span><a href="#home" class="back-top">BACK TO TOP ↑</a><span class="footer-copy">© <span id="year"></span> EXIRE</span></footer>
-  </main>
-  <div class="corner-note" aria-hidden="true">INDEPENDENT BY DESIGN <span>✳</span></div>
+
+      <section class="content-section about-section" id="about" aria-labelledby="about-title">
+        <div class="section-title reveal"><span class="section-index">01</span><div><span class="section-kicker">A LITTLE INTRODUCTION</span><h2 id="about-title">so, who am i<span>?</span></h2></div><span class="title-doodle" aria-hidden="true">↙</span></div>
+        <div class="about-layout">
+          <div class="about-copy reveal">
+            <p class="about-lead">I'm Exire. I like making things that feel <em>right</em> — not just things that technically work.</p>
+            <p>Most of my time goes into Roblox development: reanimation, combat ideas, effects, animation tools, and figuring out how to make an idea feel like its own thing. I can spend far too long on one small detail, but that's usually the bit that makes a project memorable.</p>
+            <p>This page is just my own little space to put the projects, links, and stuff I want people to find. Nothing too serious. Have a look around.</p>
+          </div>
+          <aside class="about-scribble reveal">
+            <span class="scribble-top">A FEW THINGS I LIKE</span>
+            <ul>
+              <li><span>↳</span> making & breaking things</li>
+              <li><span>↳</span> visual effects that hit</li>
+              <li><span>↳</span> learning how stuff works</li>
+              <li><span>↳</span> polishing the tiny details</li>
+            </ul>
+            <span class="scribble-stamp">STILL<br>LEARNING <b>✳</b></span>
+          </aside>
+        </div>
+      </section>
+
+      <section class="content-section projects-section" id="projects" aria-labelledby="projects-title">
+        <div class="section-title reveal"><span class="section-index">02</span><div><span class="section-kicker">THINGS FROM THE WORKBENCH</span><h2 id="projects-title">stuff i've been making<span>.</span></h2></div><span class="section-aside">A FEW PROJECTS<br>WORTH A LOOK.</span></div>
+
+        <article class="project-entry reveal">
+          <div class="project-art art-star" aria-hidden="true"><span class="art-number">01 / ER</span><span class="art-big-star">✳</span><span class="art-word">STAR<br>GLITCHER</span><span class="art-artifact">V2</span></div>
+          <div class="project-body">
+            <div class="project-meta"><span>ROBLOX / REANIMATION</span><span class="project-state state-live"><i></i> IN DEVELOPMENT</span></div>
+            <h3>FE Star Glitcher V2</h3>
+            <p>A new chapter for Star Glitcher. More thought put into the presentation, effects, and the overall feel. It's a bigger project, so it's getting the time it needs.</p>
+            <div class="project-bottom"><span>NO PUBLIC RELEASE DATE</span><span class="project-index">PROJECT 01</span></div>
+          </div>
+        </article>
+
+        <article class="project-entry reveal">
+          <div class="project-art art-reanimate" aria-hidden="true"><span class="art-number">02 / ER</span><span class="art-monogram">E<span>R</span></span><span class="art-caption">EXIRE<br>REANIMATE</span></div>
+          <div class="project-body">
+            <div class="project-meta"><span>ROBLOX / SCRIPT COLLECTION</span><span class="project-state"><i></i> ONGOING</span></div>
+            <h3>Exire Reanimate</h3>
+            <p>A collection of character reanimation projects under the Exire name. Each script gets its own identity instead of feeling like a copy of the last one.</p>
+            <div class="project-bottom"><span>THE MAIN COLLECTION</span><span class="project-index">PROJECT 02</span></div>
+          </div>
+        </article>
+
+        <article class="project-entry reveal">
+          <div class="project-art art-vfx" aria-hidden="true"><span class="art-number">03 / LAB</span><span class="vfx-rays"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="art-word">VFX<br>LAB</span><span class="art-caption">EXPERIMENT / REPEAT</span></div>
+          <div class="project-body">
+            <div class="project-meta"><span>ROBLOX / TOOLS & EFFECTS</span><span class="project-state"><i></i> EXPERIMENTAL</span></div>
+            <h3>VFX & little tools</h3>
+            <p>Custom effects, attack presentation, animation tooling, and experiments. The goal is to make every movement and hit feel intentional.</p>
+            <div class="project-bottom"><span>ALWAYS TINKERING</span><span class="project-index">PROJECT 03</span></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="discord-section" id="discord" aria-labelledby="discord-title">
+        <div class="discord-heading reveal"><span class="section-index">03</span><div><span class="section-kicker">SAY HELLO / HANG OUT</span><h2 id="discord-title">come find me<span>.</span></h2></div></div>
+        <div class="discord-card reveal">
+          <div class="discord-avatar">ER<span class="discord-online"></span></div>
+          <div class="discord-user">
+            <span class="discord-mini-label">YOU CAN FIND ME ON DISCORD AS</span>
+            <strong>cillfall</strong>
+            <p>Best place for a chat, project talk, or just hanging out.</p>
+          </div>
+          <div class="discord-buttons">
+            <button class="button button-main" id="copyDiscord" type="button">copy username <span>▣</span></button>
+            <a class="button button-outline" id="discordProfileLink" href="#" hidden>profile ↗</a>
+            <a class="button button-outline" id="discordInviteLink" href="#" target="_blank" rel="noopener" hidden>server ↗</a>
+            <span class="copy-feedback" id="copyFeedback" role="status" aria-live="polite"></span>
+          </div>
+          <span class="discord-card-spark" aria-hidden="true">✳</span>
+        </div>
+      </section>
+
+      <section class="content-section link-section" id="links" aria-labelledby="links-title">
+        <div class="section-title reveal"><span class="section-index">04</span><div><span class="section-kicker">THE REST OF THE INTERNET</span><h2 id="links-title">link stash<span>.</span></h2></div><span class="section-aside">OPEN IN A NEW TAB.<br>GO WANDER.</span></div>
+        <div class="link-stash reveal">
+          <a class="stash-link" href="https://scriptblox.com/u/exire" target="_blank" rel="noopener"><span class="stash-icon">S</span><span><strong>ScriptBlox</strong><small>scripts & releases</small></span><b>↗</b></a>
+          <a class="stash-link" id="githubLink" href="#" target="_blank" rel="noopener" hidden><span class="stash-icon">⌘</span><span><strong>GitHub</strong><small>code & projects</small></span><b>↗</b></a>
+          <a class="stash-link" href="#discord"><span class="stash-icon">◉</span><span><strong>Discord</strong><small>say hello</small></span><b>↗</b></a>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-left"><a class="footer-mark" href="#home">er<span>✳</span></a><span>made by exire, for no particular reason.</span></div>
+        <a href="#home" class="back-top">BACK TO THE TOP ↑</a>
+        <span class="footer-copy">© <span id="year"></span> / END OF PAGE</span>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>
