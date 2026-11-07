@@ -5,7 +5,10 @@
   const menuButton = document.getElementById('menuToggle');
   const nav = document.getElementById('mainNav');
   const navLinks = [...document.querySelectorAll('.nav-link')];
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const year = document.getElementById('year');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (year) year.textContent = String(new Date().getFullYear());
 
   function setMenu(open) {
     if (!menuButton || !nav) return;
@@ -27,19 +30,18 @@
   });
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 600) setMenu(false);
+    if (window.innerWidth > 650) setMenu(false);
   });
 
-  if ('IntersectionObserver' in window) {
-    const sections = ['home', 'about', 'projects', 'contact']
-      .map(id => document.getElementById(id))
-      .filter(Boolean);
+  const sections = ['top', 'work', 'about', 'contact']
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
 
+  if ('IntersectionObserver' in window) {
     const sectionObserver = new IntersectionObserver(entries => {
       const current = entries
         .filter(entry => entry.isIntersecting)
         .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
       if (!current) return;
 
       navLinks.forEach(link => {
@@ -48,27 +50,28 @@
         if (active) link.setAttribute('aria-current', 'location');
         else link.removeAttribute('aria-current');
       });
-    }, { rootMargin: '-25% 0px -60% 0px', threshold: [0, .1, .3, .55] });
+    }, { rootMargin: '-20% 0px -65% 0px', threshold: [0, .12, .3, .55] });
 
     sections.forEach(section => sectionObserver.observe(section));
 
-    const revealObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
-        revealObserver.unobserve(entry.target);
-      });
-    }, { rootMargin: '0px 0px -7% 0px', threshold: .05 });
+    if (!reducedMotion) {
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: .08 });
 
-    document.querySelectorAll('.reveal').forEach((element, index) => {
-      const delay = reduceMotion ? 0 : Math.min(index % 4, 3) * 70;
-      element.style.setProperty('--reveal-delay', delay + 'ms');
-      revealObserver.observe(element);
-    });
+      document.querySelectorAll('.reveal').forEach((element, index) => {
+        element.style.setProperty('--delay', Math.min(index % 4, 3) * 70 + 'ms');
+        revealObserver.observe(element);
+      });
+    } else {
+      document.querySelectorAll('.reveal').forEach(element => element.classList.add('is-visible'));
+    }
   } else {
-    document.querySelectorAll('.reveal').forEach(element => {
-      element.classList.add('is-visible');
-    });
+    document.querySelectorAll('.reveal').forEach(element => element.classList.add('is-visible'));
   }
 
   const username = String(config.discordUsername || '').trim().replace(/^@/, '');
@@ -101,12 +104,5 @@
   if (inviteLink && /^https:\/\/(discord\.gg|discord\.com\/invite)\/[A-Za-z0-9-]+\/?$/.test(invite)) {
     inviteLink.href = invite;
     inviteLink.hidden = false;
-  }
-
-  const githubLink = document.getElementById('githubLink');
-  const githubUrl = String(config.githubUrl || '').trim();
-  if (githubLink && /^https:\/\/github\.com\/[A-Za-z0-9_.-]+\/?$/.test(githubUrl)) {
-    githubLink.href = githubUrl;
-    githubLink.hidden = false;
   }
 })();
