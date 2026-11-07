@@ -3,127 +3,165 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0e0d11">
-  <meta name="description" content="exire personal site">
-  <title>exire</title>
+  <meta name="theme-color" content="#0b0a10">
+  <meta name="description" content="exire — roblox development, reanimation and vfx">
+  <title>exire — roblox developer</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
   <script src="site-config.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="site-shell">
-    <header class="site-header">
-      <a class="wordmark" href="#home">exire</a>
-      <nav class="main-nav" id="mainNav" aria-label="main navigation">
-        <a class="nav-link is-active" href="#home">home</a>
+  <div class="page-wrap">
+    <header class="header" id="top">
+      <a class="brand" href="#top" aria-label="exire home"><span class="brand-er">E<span>R</span></span><span class="brand-name">exire</span></a>
+      <nav class="nav" id="mainNav" aria-label="main navigation">
+        <a class="nav-link is-active" href="#top">home</a>
+        <a class="nav-link" href="#work">work</a>
         <a class="nav-link" href="#about">about</a>
-        <a class="nav-link" href="#projects">projects</a>
         <a class="nav-link" href="#contact">contact</a>
       </nav>
+      <a class="header-social" href="https://scriptblox.com/u/exire" target="_blank" rel="noopener">scriptblox <span>↗</span></a>
       <button class="menu-toggle" id="menuToggle" type="button" aria-label="open menu" aria-expanded="false" aria-controls="mainNav">
-        <span></span><span></span><small>menu</small>
+        <span></span><span></span>
       </button>
     </header>
 
     <main>
-      <section class="hero" id="home" aria-labelledby="heroTitle">
-        <div class="hero-main">
-          <p class="eyebrow reveal">yo whats up</p>
-          <h1 id="heroTitle" class="reveal"><span>im</span> exire</h1>
-          <p class="hero-copy reveal">i make roblox scripts mostly reanimation stuff and vfx</p>
-          <p class="hero-copy secondary reveal">i spend a lot of time messing with animations and effects until they feel right</p>
-          <div class="hero-links reveal">
-            <a href="#projects" class="underlined-link">look at my projects</a>
-            <a href="https://scriptblox.com/u/exire" target="_blank" rel="noopener" class="underlined-link">scriptblox</a>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow reveal"><span class="eyebrow-line"></span> ROBLOX DEVELOPER <span class="eyebrow-divider">/</span> EXIRE REANIMATE</div>
+          <h1 class="hero-title reveal" id="hero-title">i make<br><span>roblox</span> stuff<span class="title-dot">.</span></h1>
+          <p class="hero-description reveal">im exire and most of what i do is reanimation scripts vfx and building things until they feel right</p>
+          <div class="hero-actions reveal">
+            <a class="button button-primary" href="#work">see what ive made <span>↘</span></a>
+            <a class="plain-link" href="https://scriptblox.com/u/exire" target="_blank" rel="noopener">my scriptblox</a>
+          </div>
+          <div class="hero-foot reveal">
+            <span>luau</span><i></i><span>reanimation</span><i></i><span>vfx</span>
           </div>
         </div>
-        <aside class="now" aria-label="current project">
-          <span class="now-label">right now</span>
-          <span class="now-project">star glitcher v2</span>
-          <span class="now-copy">still working on it</span>
-          <span class="now-copy">taking my time with this one</span>
-          <span class="now-rule"></span>
-          <span class="now-small">mostly scripting and vfx</span>
-        </aside>
-        <a href="#about" class="keep-going">keep going</a>
-      </section>
 
-      <section class="content-section about-section" id="about">
-        <div class="section-aside reveal">
-          <span class="section-number">01</span>
-          <h2>about me</h2>
+        <div class="hero-showcase reveal">
+          <a class="showcase-main" href="https://scriptblox.com/script/Universal-Script-ER-l-Lightning-Cannon-V1-222042" target="_blank" rel="noopener" aria-label="view lightning cannon v1 on scriptblox">
+            <img src="https://scriptblox.com/images/script/0-1779602155874.png" alt="in game screenshot from exire lightning cannon v1" fetchpriority="high">
+            <span class="image-index">ER  /  001</span>
+            <span class="image-caption">lightning cannon v1 <b>↗</b></span>
+          </a>
+          <a class="showcase-secondary" href="https://scriptblox.com/script/Universal-Script-ER-l-Studio-Dummy-V3-241158" target="_blank" rel="noopener" aria-label="view studio dummy v3 on scriptblox">
+            <img src="https://scriptblox.com/images/script/0-1783145974689.png" alt="in game screenshot from exire studio dummy v3" loading="lazy" decoding="async">
+          </a>
+          <span class="showcase-note">actual stuff ive made<br>not a mockup</span>
+          <span class="showcase-corner">EXIRE REANIMATE</span>
         </div>
-        <div class="section-main reveal">
-          <p class="about-lead">im usually in roblox studio making something or trying to figure out how to make an idea work</p>
-          <p>most of my stuff is scripting reanimation and custom effects and i like building my own systems and spending time on the parts people actually notice when they use a script</p>
-          <p>sometimes i get caught up on one animation or effect for ages but thats normally how i end up with something im happy with</p>
-          <p>i made this site so my projects and links are all in one place instead of scattered everywhere</p>
+
+        <div class="hero-bottom">
+          <span>SCROLL A BIT</span>
+          <span class="hero-bottom-line"></span>
+          <span>01 — 04</span>
         </div>
       </section>
 
-      <section class="content-section project-section" id="projects">
-        <div class="section-aside reveal">
-          <span class="section-number">02</span>
-          <h2>things ive made</h2>
-          <p class="aside-note">some old stuff and what im working on now</p>
+      <section class="now-bar reveal" aria-label="current project">
+        <div class="now-label"><span class="live-dot"></span> CURRENTLY WORKING ON</div>
+        <div class="now-title">star glitcher v2</div>
+        <div class="now-description">still working on it and taking my time</div>
+        <a href="#work" class="now-link">more below <span>↓</span></a>
+      </section>
+
+      <section class="work-section section" id="work">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-overline">01 / THE WORK</span>
+            <h2>things ive made<span class="accent">.</span></h2>
+          </div>
+          <p>some of the scripts and projects<br>ive spent time on</p>
         </div>
-        <div class="section-main project-list">
-          <article class="project-row reveal">
-            <span class="project-count">01</span>
-            <div class="project-info">
-              <div class="project-meta"><span>in development</span><span>roblox</span></div>
-              <h3>star glitcher v2</h3>
-              <p>the next version of star glitcher im pushing the effects and animations further and trying to make the whole thing feel like a proper step up from the first release</p>
-            </div>
+
+        <article class="featured-project reveal">
+          <div class="featured-number">01</div>
+          <div class="featured-content">
+            <div class="project-kicker"><span>IN DEVELOPMENT</span><span>ROBLOX</span></div>
+            <h3>star glitcher <em>v2</em></h3>
+            <p>the next version of star glitcher. im pushing the effects and animations further and trying to make it feel like a proper step up from the first one</p>
+            <div class="featured-bottom"><span>NO RELEASE DATE YET</span><span class="progress-line"><i></i></span></div>
+          </div>
+          <div class="featured-side" aria-hidden="true">
+            <span class="side-big">SG</span>
+            <span class="side-small">EXIRE<br>REANIMATE</span>
+            <span class="side-v2">02</span>
+          </div>
+        </article>
+
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <a class="project-image" href="https://scriptblox.com/script/Universal-Script-ER-l-Lightning-Cannon-V1-222042" target="_blank" rel="noopener">
+              <img src="https://scriptblox.com/images/script/0-1779602155874.png" alt="lightning cannon v1 gameplay screenshot" loading="lazy" decoding="async">
+              <span class="image-open">VIEW SCRIPT ↗</span>
+            </a>
+            <div class="project-card-meta"><span>02 / RELEASED</span><span>ROBLOX</span></div>
+            <h3>lightning cannon v1</h3>
+            <p>the first exire reanimate release where i really went in on the vfx and attack animations. i built a new animator for it and spent a lot of time on how the attacks looked and felt</p>
+            <a class="project-text-link" href="https://scriptblox.com/script/Universal-Script-ER-l-Lightning-Cannon-V1-222042" target="_blank" rel="noopener">view on scriptblox <span>↗</span></a>
           </article>
-          <article class="project-row reveal">
-            <span class="project-count">02</span>
-            <div class="project-info">
-              <div class="project-meta"><span>released</span><span>roblox</span></div>
-              <h3>lightning cannon v1</h3>
-              <p>one of my releases where i really pushed the vfx and attack animations this was the first exire reanimate script where i went all in on the presentation</p>
-            </div>
+
+          <article class="project-card reveal">
+            <a class="project-image" href="https://scriptblox.com/script/Universal-Script-ER-l-Studio-Dummy-V3-241158" target="_blank" rel="noopener">
+              <img src="https://scriptblox.com/images/script/0-1783145974689.png" alt="studio dummy v3 gameplay screenshot" loading="lazy" decoding="async">
+              <span class="image-open">VIEW SCRIPT ↗</span>
+            </a>
+            <div class="project-card-meta"><span>03 / RELEASED</span><span>ROBLOX</span></div>
+            <h3>studio dummy v3</h3>
+            <p>a dummy setup for testing attacks and movement with shooting melee teleport and goto spawn. it also has the effects for hits movement and the attacks themselves</p>
+            <a class="project-text-link" href="https://scriptblox.com/script/Universal-Script-ER-l-Studio-Dummy-V3-241158" target="_blank" rel="noopener">view on scriptblox <span>↗</span></a>
           </article>
-          <article class="project-row reveal">
-            <span class="project-count">03</span>
-            <div class="project-info">
-              <div class="project-meta"><span>released</span><span>roblox</span></div>
-              <h3>fe star glitcher v1</h3>
-              <p>the first star glitcher release and one of the projects that helped shape what exire reanimate became</p>
-            </div>
-          </article>
-          <a class="all-projects-link" href="https://scriptblox.com/u/exire" target="_blank" rel="noopener">the rest of my scripts are on scriptblox</a>
+        </div>
+
+        <div class="work-footer reveal">
+          <span>THATS NOT EVERYTHING</span>
+          <a href="https://scriptblox.com/u/exire" target="_blank" rel="noopener">all my scripts on scriptblox <span>↗</span></a>
         </div>
       </section>
 
-      <section class="content-section contact-section" id="contact">
-        <div class="section-aside reveal">
-          <span class="section-number">03</span>
-          <h2>find me</h2>
+      <section class="about-section section" id="about">
+        <div class="about-left reveal">
+          <span class="section-overline">02 / A BIT ABOUT ME</span>
+          <h2>im exire<span class="accent">.</span></h2>
+          <p class="about-aside">mostly just making things<br>and seeing where they go</p>
         </div>
-        <div class="section-main contact-main reveal">
-          <div class="discord-handle">
-            <span class="contact-label">discord</span>
+        <div class="about-right reveal">
+          <p class="about-lead">im usually in studio making something or trying to figure out how to make an idea work</p>
+          <p>most of my stuff is scripting reanimation and custom effects. i like building my own systems and getting the details right instead of rushing something out just to say its finished</p>
+          <p>this site is just a place to keep my projects and links together. have a look around</p>
+          <div class="about-signoff">— exire</div>
+        </div>
+      </section>
+
+      <section class="contact-section section" id="contact">
+        <div class="contact-heading reveal">
+          <span class="section-overline">03 / GET IN TOUCH</span>
+          <h2>come say hi<span class="accent">.</span></h2>
+        </div>
+        <div class="contact-content reveal">
+          <div class="discord-id">
+            <span>DISCORD</span>
             <strong>cillfall</strong>
           </div>
           <div class="contact-actions">
-            <button class="text-button" id="copyDiscord" type="button">copy username</button>
-            <a class="text-button" id="discordProfileLink" href="#" hidden>open profile</a>
-            <a class="text-button" id="discordInviteLink" href="#" target="_blank" rel="noopener" hidden>join server</a>
+            <button class="copy-button" id="copyDiscord" type="button">copy username <span>▣</span></button>
+            <a id="discordProfileLink" href="#" hidden>open profile ↗</a>
+            <a id="discordInviteLink" href="#" target="_blank" rel="noopener" hidden>join the server ↗</a>
             <span class="copy-feedback" id="copyFeedback" role="status" aria-live="polite"></span>
-          </div>
-          <div class="elsewhere">
-            <a href="https://scriptblox.com/u/exire" target="_blank" rel="noopener">scriptblox</a>
-            <a id="githubLink" href="#" target="_blank" rel="noopener" hidden>github</a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <span>thats pretty much it</span>
-      <a href="#home">back to the top</a>
-      <span class="footer-mark">exire</span>
+    <footer class="footer">
+      <a class="footer-brand" href="#top">ER</a>
+      <span>made by exire</span>
+      <a href="#top" class="footer-top">BACK TO TOP ↑</a>
+      <span class="footer-year">© <span id="year"></span></span>
     </footer>
   </div>
 </body>
