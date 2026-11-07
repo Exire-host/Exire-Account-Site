@@ -155,8 +155,9 @@ img { display: block; max-width: 100%; }
   margin: 25px 0 23px;
   font-size: clamp(76px, 9vw, 120px);
   font-weight: 760;
-  letter-spacing: -.105em;
-  line-height: .82;
+  letter-spacing: -.045em;
+  line-height: .98;
+  word-spacing: .025em;
 }
 
 .hero-title > span:first-of-type {
@@ -779,7 +780,7 @@ img { display: block; max-width: 100%; }
     grid-template-columns: minmax(0, 1fr) minmax(310px, .9fr);
     gap: 30px;
   }
-  .hero-title { font-size: clamp(68px, 9vw, 92px); }
+  .hero-title { font-size: clamp(68px, 9vw, 92px); letter-spacing: -.04em; line-height: .98; }
   .showcase-main { height: 242px; }
   .showcase-secondary { height: 128px; }
   .now-bar { grid-template-columns: 1fr 1fr; padding: 16px 18px; gap: 9px 18px; }
@@ -846,6 +847,8 @@ img { display: block; max-width: 100%; }
   .hero-title {
     margin: 23px 0 19px;
     font-size: clamp(70px, 17vw, 100px);
+    letter-spacing: -.035em;
+    line-height: .98;
   }
   .hero-description { font-size: 12px; }
   .hero-actions { gap: 18px; margin-top: 23px; }
