@@ -2,34 +2,32 @@
   'use strict';
 
   const config = window.EXIRE_CONFIG || {};
-  const rail = document.getElementById('profileRail');
+  const sidebar = document.getElementById('profileRail');
   const menuButton = document.getElementById('mobileMenu');
   const scrim = document.getElementById('mobileScrim');
   const navLinks = [...document.querySelectorAll('.nav-link')];
-  const isMobile = () => window.matchMedia('(max-width: 650px)').matches;
+  const isMobile = () => window.matchMedia('(max-width: 620px)').matches;
 
   document.documentElement.classList.add('js-ready');
 
   function setMenu(open, restoreFocus = false) {
-    if (!rail || !menuButton || !scrim) return;
-    rail.classList.toggle('menu-open', open);
+    if (!sidebar || !menuButton || !scrim) return;
+    sidebar.classList.toggle('menu-open', open);
     scrim.classList.toggle('visible', open && isMobile());
     menuButton.setAttribute('aria-expanded', String(open));
-    menuButton.setAttribute('aria-label', open ? 'Close site menu' : 'Open site menu');
+    menuButton.setAttribute('aria-label', open ? 'close menu' : 'open menu');
     if (restoreFocus && !open) menuButton.focus();
   }
 
   menuButton?.addEventListener('click', () => {
-    setMenu(!rail.classList.contains('menu-open'));
+    setMenu(!sidebar.classList.contains('menu-open'));
   });
   scrim?.addEventListener('click', () => setMenu(false, true));
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (isMobile()) setMenu(false);
-    });
-  });
+  navLinks.forEach(link => link.addEventListener('click', () => {
+    if (isMobile()) setMenu(false);
+  }));
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && rail?.classList.contains('menu-open')) {
+    if (event.key === 'Escape' && sidebar?.classList.contains('menu-open')) {
       setMenu(false, true);
     }
   });
@@ -64,7 +62,7 @@
       });
     }, { rootMargin: '0px 0px -8% 0px', threshold: .08 });
     document.querySelectorAll('.reveal').forEach((element, index) => {
-      element.style.transitionDelay = Math.min(index % 4, 3) * 55 + 'ms';
+      element.style.transitionDelay = Math.min(index % 3, 2) * 45 + 'ms';
       revealObserver.observe(element);
     });
   } else {
@@ -76,14 +74,14 @@
   const feedback = document.getElementById('copyFeedback');
   copyButton?.addEventListener('click', async () => {
     if (!username) {
-      if (feedback) feedback.textContent = 'Discord username is not configured.';
+      if (feedback) feedback.textContent = 'discord username not configured';
       return;
     }
     try {
       await navigator.clipboard.writeText(username);
-      if (feedback) feedback.textContent = 'copied @' + username + '!';
+      if (feedback) feedback.textContent = 'copied ' + username;
     } catch {
-      if (feedback) feedback.textContent = 'your username: @' + username;
+      if (feedback) feedback.textContent = 'username is ' + username;
     }
   });
 
