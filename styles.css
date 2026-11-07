@@ -64,6 +64,7 @@ button { font: inherit; }
 }
 
 .site-header {
+  position: relative;
   min-height: 72px;
   display: flex;
   align-items: center;
@@ -320,7 +321,7 @@ button { font: inherit; }
   padding: 20px 0 22px;
   border-top: 1px solid var(--line);
   transition: padding-left var(--speed-normal) var(--tween-out),
-              border-color var(--speed-normal) var(--tween-out);
+              border-color var(--speed-normal) var(--tween-soft);
 }
 
 .project-row:last-of-type {
@@ -573,7 +574,7 @@ button { font: inherit; }
     opacity: 0;
     pointer-events: none;
     transition:
-      max-height var(--speed-normal) var(--tween-out),
+      max-height var(--speed-normal) var(--tween-in-out),
       opacity var(--speed-quick) var(--tween-out),
       padding var(--speed-normal) var(--tween-out),
       border-color var(--speed-normal) var(--tween-out);
